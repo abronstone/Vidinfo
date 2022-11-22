@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEARCH: InfoVideo</title>
+    <link rel="stylesheet" href="webapp.css" type="text/css" />
+    <link rel="stylesheet" href="static/webapp.css" type="text/css" />
+    <link rel="icon" href="static/slate.png" type="image/png">
+    <script type="text/javascript" src="search.js"></script>
+    <script type="text/javascript" src="static/search.js"></script>
+</head>
+<style>
+    input{float:right;}
+</style>
+<body>
+    <div class="dropdown">
+        <button class="dropbtn"><strong>SEARCH</strong></button>
+        <div class="dropdown-content">
+          <a href="http://127.0.0.1:5000/movies">Search</a>
+          <a href="http://127.0.0.1:5000/overviews">Overviews</a>
+          <a href="http://127.0.0.1:5000/generator">Movie Generator</a>
+          <a href="http://127.0.0.1:5000/comparison">Comparison</a>
+        </div>
+    </div>
+    
+    <h1>
+        <a class='main_button' href="http://127.0.0.1:5000/">VIDINFO</a>
+    </h1>
+    <br><br>
+    <div class="description"><strong>Search for movies!</strong><br><br>Fill out any of the filters below, and press submit to get results!</div>
+    <div class="row">
+        <div class="column">
+            <div id='filter'>
+                <strong>FILTERS:</strong>
+                <button id="submission" style="float:right;">Submit</button><br><br><br>
+
+                <label for="title">Title</label>
+                <input type="text" id="title" name="Movie Title"><br><br>
+
+                <label for="director">Director</label>
+                <input type="text" id="director" name="Director"><br><br>
+
+                <label for="keyword">Keyword</label>
+                <input type="text" name="Keyword" id="keyword"><br><br>
+
+                <label for="collection">Collection</label>
+                <input type="text" name="Collection" id="collection"><br><br>
+
+                <label for="cast">Cast</label>
+                <input type="text" name="Cast" id="cast"><br><br>
+
+                <label for="crew">Crew</label>
+                <input type="text" name="Crew" id="crew"><br><br>
+
+                <label for="productioncompany">Production Company</label>
+                <input type="text" name="Production Company" id="productioncompany"><br><br>
+
+                <label for="genre">Genre</label>
+                <input type="text" name="Genre" id="genre"><br><br>
+                
+                <label>Language:
+                    <input list="droplist" id="languagedroplist" name="searchbar" /></label>
+                    <datalist id="droplist">
+                        <option value="item">
+                    </datalist>
+                <br><br>
+
+                <label for="country">Country of origin</label>
+                <input type="text" name="Country of origin" id="country"><br><br>
+
+                <label for="rating">Rating greater than... (1-5)</label>
+                <input type="checkbox" id="rating-box" name="Rating">
+                <input type="range" id="rating" name="Rating" id="slider" min="1" max="5" value="1"><br><br>
+
+                <label for="release-date-before">Released before</label>
+                <input type="date" name="Release Date" id="release-date-before" min="1900-01-01" max="2016-12-31"><br><br>
+
+                <label for="release-date-after">Released after</label>
+                <input type="date" name="Release Date" id="release-date-after" min="1900-01-01" max="2016-12-31"><br><br>
+
+                <label for="released">Include unreleased movies</label>
+                <input type="checkbox" name="Released" id="released"><br><br>
+
+                <label for="adult">Filter out adult movies</label>
+                <input type="checkbox" name="Adult" id="adult"><br><br>
+            </div>
+        </div>
+        <div class="column">
+            <div id="results">
+                <strong style="padding:10px;">RESULTS:</strong><br>
+                <ul id="result-list">
+                    [press submit to get results!]
+                </ul>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="designers">
+        Aaron Bronstone and Jack Owens
+    </div>
+    <br>
+    <br>
+</body>
+</html>
